@@ -51,8 +51,8 @@ See the ipython notebook from the class for reference.
 2. Split the data in two parts (50-50) for training and testing (first for training, second for testing). Train a linear regressor model for each variable individually (plus a bias term) and compute the MSE on the training and the testing set. Which one is the most informative? which one generalizes better? and worse?
 3. Now train a model with all the variables plus a bias term. What is the performance in the test set? Now remove the worst-performing variable you found in step 2, and run again the experiment. What happened?
 4. We can give more capacity to a linear regression model by using *basis functions* (Bishop, sec. 3.1). In short we can apply non-linear transformations to the input variables to extend the feature vector. Here we will try a polynomial function:
-![Alt](img/poly.png)
-
+-> ![Alt](img/poly.png) <-
+Repeat step 2 but adding all polynomials up to degree 4. What are the effects of adding more capacity to the model?
 
 ## Gradient Descent
 
