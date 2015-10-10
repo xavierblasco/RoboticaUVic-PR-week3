@@ -22,7 +22,8 @@ Besides these required libraries, IPython is recommended as an extended and more
 In Ubuntu 14.10, all the required software can be installed with the following commands:
 
 ```bash
-$ sudo apt-get install python-scipy python-numpy python-matplotlib python-opencv python-sklearn
+$ sudo apt-get install python-scipy python-numpy python-matplotlib \
+  python-opencv python-sklearn
 $ sudo apt-get install ipython
 ```
 
