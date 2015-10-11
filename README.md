@@ -57,14 +57,14 @@ For this assignment, it is recommended to read at least the **Python+Numpy** tut
 
 See the ipython notebook from the class for reference.
 
-Q1. [Download](http://archive.ics.uci.edu/ml/datasets/Housing) the
+1. [Download](http://archive.ics.uci.edu/ml/datasets/Housing) the
 Housing Data Set from the UCI repository.
 
-Q2. Load the data (using *numpy.loadtxt*) and separate the last column
+2. Load the data (using *numpy.loadtxt*) and separate the last column
 (target value, MEDV). Compute the average of the target value and the
 MSE obtained using it as a constant prediction.
 
-Q3. Split the data in two parts (50-50) for training and testing (first
+3. Split the data in two parts (50-50) for training and testing (first
 half for training, second half for testing). Train a linear regressor
 model for each variable individually (plus a bias term) and compute
 the MSE on the training and the testing set. Which variable is the
@@ -72,12 +72,12 @@ most informative? which one makes the model generalizes better? and
 worse? Compute the coefficient of determination (R^2) measure for the
 test set.
 
-Q4. Now train a model with all the variables plus a bias term. What is
+4. Now train a model with all the variables plus a bias term. What is
 the performance in the test set? Try removing the worst-performing
 variable you found in step 2, and run again the experiment. What
 happened?
 
-Q5. We can give more capacity to a linear regression model by using
+5. We can give more capacity to a linear regression model by using
 *basis functions* (Bishop, sec. 3.1). In short, we can apply
 non-linear transformations to the input variables to extend the
 feature vector. Here we will try a polynomial function:  
@@ -101,10 +101,10 @@ techniques
 3.     theta = theta - nu * f(theta)
 ```
 
-Q6. Implement code to train a regularized linear regression
+6. Implement code to train a regularized linear regression
 model using gradient descent according to the previous pseudocode.
 
-Q7. 
+7. 
 
 ## Model Selection
 
