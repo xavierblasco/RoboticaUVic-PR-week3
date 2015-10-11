@@ -81,7 +81,7 @@ happened?
 *basis functions* (Bishop, sec. 3.1). In short, we can apply
 non-linear transformations to the input variables to extend the
 feature vector. Here we will try a polynomial function:  
-![Alt](img/poly.png)  
+  ![Alt](img/poly.png)  
 Repeat step 2 but adding, one by one, all
 polynomials up to degree 4. What are the effects of adding more
 capacity to the model?
