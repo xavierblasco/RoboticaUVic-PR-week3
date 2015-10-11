@@ -5,7 +5,10 @@ UVic Robotics Master. Pattern Recognition Homework 1
 
 Fork this repository and write code to complete the assignments. When
 executed, your code must print the answers to the questions in each
-section, alongside the results that led to these conclusions.
+section, alongside the results that led to these conclusions. Module
+*textwrap* can be used to format long paragraphs of text and make them
+look nicer. An IPython notebook is an acceptable alternative to a
+plain python program.
 
 First upload the completed assignment to the course Moodle for
 grading; then, correct all the isses marked by the teacher and push it
@@ -54,16 +57,58 @@ For this assignment, it is recommended to read at least the **Python+Numpy** tut
 
 See the ipython notebook from the class for reference.
 
-0. [Download](http://archive.ics.uci.edu/ml/datasets/Housing) the Housing Data Set from the UCI repository.
-1. Load the data (using *numpy.loadtxt*) and separate the last column (target value, MEDV). Compute the average of the target value and the MSE obtained using it as a constant prediction.
-2. Split the data in two parts (50-50) for training and testing (first for training, second for testing). Train a linear regressor model for each variable individually (plus a bias term) and compute the MSE on the training and the testing set. Which variable is the most informative? which one generalizes better? and worse?
-3. Now train a model with all the variables plus a bias term. What is the performance in the test set? Try removing the worst-performing variable you found in step 2, and run again the experiment. What happened?
-4. We can give more capacity to a linear regression model by using *basis functions* (Bishop, sec. 3.1). In short, we can apply non-linear transformations to the input variables to extend the feature vector. Here we will try a polynomial function:
+0. [Download](http://archive.ics.uci.edu/ml/datasets/Housing) the
+Housing Data Set from the UCI repository.
+
+1. Load the data (using *numpy.loadtxt*) and separate the last column
+(target value, MEDV). Compute the average of the target value and the
+MSE obtained using it as a constant prediction.
+
+2. Split the data in two parts (50-50) for training and testing (first
+half for training, second half for testing). Train a linear regressor
+model for each variable individually (plus a bias term) and compute
+the MSE on the training and the testing set. Which variable is the
+most informative? which one makes the model generalizes better? and
+worse? Compute the coefficient of determination (R^2) measure for the
+test set.
+
+3. Now train a model with all the variables plus a bias term. What is
+the performance in the test set? Try removing the worst-performing
+variable you found in step 2, and run again the experiment. What
+happened?
+
+4. We can give more capacity to a linear regression model by using
+*basis functions* (Bishop, sec. 3.1). In short, we can apply
+non-linear transformations to the input variables to extend the
+feature vector. Here we will try a polynomial function:
 ![Alt](img/poly.png)
-Repeat step 2 but adding, one by one, all polynomials up to degree 4. What are the effects of adding more capacity to the model?
+Repeat step 2 but adding, one by one, all polynomials up to degree
+4. What are the effects of adding more capacity to the model?
 
 ## Gradient Descent
+
+As we have seen, overfitting is a problem that arises when we try to
+have more powerful methods, able to better adapt to the data. In order
+to reduce overfitting, we can **regularize** our model, but then we do
+not have a closed form solution and must resort to
+optimization. Gradient descent is one of the most common optimization
+techniques
+
+```
+1. Initialize theta at random
+2. While not converged:
+3.     theta = theta - nu * f(theta)
+```
+
+
+5. Implement code to train a regularized linear regression
+model using gradient descent according to the following pseudocode:
 
 
 
 ## Model Selection
+
+
+## Extra
+
+. Think of how you would use linear regression to improve or automate some aspect of your work or daily life (doesn't need to make a lot of sense), and describe the way in which you would approach the problem.
