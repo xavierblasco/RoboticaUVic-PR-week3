@@ -120,11 +120,11 @@ the objective function.
 - **Q7**) Implement code to train a regularized linear regression
 model using gradient descent according to the previous pseudocode.
  > Some hints:  
-   - Make sure your *f* and *f'* functions are correct. Here are some
-   values for reference:  
-    *f*(data_train_with_bias, theta_all_zeros) = 660.1083  
-    *f'*(data_train_with_bias, theta_all_zeros) = [ -48.62, -20.40, -676.58, -422.27, -3.90, -24.70, -317.49, -3033.81, -206.06, -222.99, -15327.84, -857.69, -18476.12, -477.47]  
-   - Start with only a few iterations, and check that your loss is decreassing, if it is doing a zig-zag, lower your learning step
+ >  - Make sure your *f* and *f'* functions are correct. Here are some
+ >  values for reference:  
+ >   *f*(data_train_with_bias, theta_all_zeros) = 660.1083  
+ >   *f'*(data_train_with_bias, theta_all_zeros) = [ -48.62, -20.40, -676.58, -422.27, -3.90, -24.70, -317.49, -3033.81, -206.06, -222.99, -15327.84, -857.69, -18476.12, -477.47]  
+ >  - Start with only a few iterations, and check that your loss is decreassing, if it is doing a zig-zag, lower your learning step
 
 
 ## Model Selection
