@@ -81,7 +81,7 @@ happened?
 *basis functions* (Bishop, sec. 3.1). In short, we can apply
 non-linear transformations to the input variables to extend the
 feature vector. Here we will try a polynomial function:  
- &nbsp;&nbsp;&nbsp;&nbsp; ![Alt](img/poly.png)  
+ &nbsp;&nbsp;&nbsp;&nbsp; ![Polynomial basis expansion](img/poly.png)  
 Repeat step 2 but adding, one by one, all
 polynomials up to degree 4. What are the effects of adding more
 capacity to the model?
@@ -97,12 +97,19 @@ techniques
 
 ```
 1. Initialize theta at random
-2. While not converged:
-3.     theta = theta - nu * f(theta)
+2. it = 0
+2. While it<maxit:
+3.     theta<sub>t+1</sub> = theta - nu * f'(theta)
+4.     
 ```
 
 - **Q6**) Implement code to train a regularized linear regression
 model using gradient descent according to the previous pseudocode.
+The objective function is the following:  
+ &nbsp;&nbsp;&nbsp;&nbsp; ![Alt](img/RegLogReg.png)  
+And its derivative is:  
+  &nbsp;&nbsp;&nbsp;&nbsp; ![Alt](img/RegLogRegPrim.png)  
+As an optional exercise, work the derivation of the objective function.
 
 - **Q7**)
 
