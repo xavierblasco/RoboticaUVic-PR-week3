@@ -44,7 +44,7 @@ $ sudo apt-get install ipython
 ```
 
 Learning Python is extraordinarily easy, especially if other
-programming languages are already known. There are a few tutorials to
+programming languages are already known. There are some tutorials to
 get up to speed in a few minutes:
 - *Learn Python in 10 minutes* [tutorial](http://www.stavros.io/tutorials/python/) for beginners
 - A very concise and recommendable **Python+Numpy** [tutorial](https://cs231n.github.io/python-numpy-tutorial/) by Justin Johnson
@@ -64,13 +64,13 @@ Housing Data Set from the UCI repository.
 (target value, MEDV). Compute the average of the target value and the
 MSE obtained using it as a constant prediction.
 
-- **Q3**) Split the data in two parts (50-50) for training and testing (first
-half for training, second half for testing). Train a linear regressor
-model for each variable individually (plus a bias term) and compute
-the MSE on the training and the testing set. Which variable is the
-most informative? which one makes the model generalizes better? and
-worse? Compute the coefficient of determination (R^2) measure for the
-test set.
+- **Q3**) Split the data in two parts (50-50) for training and testing
+(first half for training, second half for testing). Train a linear
+regressor model for each variable individually (plus a bias term) and
+compute the MSE on the training and the testing set. Which variable is
+the most informative? which one makes the model generalizes better?
+and worse? Compute the coefficient of determination (R^2) for the test
+set.
 
 - **Q4**) Now train a model with all the variables plus a bias term. What is
 the performance in the test set? Try removing the worst-performing
@@ -96,15 +96,16 @@ we will use *Gradient Descent*, which is a very common optimization
 algorithm. Here is a simple implementation in pseudo-code:
 
 ```
-1. Initialize theta(0) at random
-2. t=0, maxit=100, epsilon=0.01, loss=zeros(maxit)
-3. loss(0) = f(theta)
-4. do
-5.     t=t+1
-6.     theta(t) = theta(t-1) - step * f'(theta(t-1))
-7.     loss(t) = f(theta)
-8. While t<maxit and (t>1 and loss(t-1)-loss(t)>epsilon):
-9. return theta
+0. Function Gradient_Descent
+1.   Initialize theta(0) at random
+2.   t=0, maxit=100, step=0.01; epsilon=0.0001, loss=zeros(maxit)
+3.   loss(0) = f(theta)
+4.   do
+5.      t=t+1
+6.      theta(t) = theta(t-1) - step * f'(theta(t-1))
+7.      loss(t) = f(theta)
+8.   While t<maxit and (t>1 and loss(t-1)-loss(t)>epsilon):
+9.   return theta
 ```
 
 - **Q6**) The objective function *f* for Regularized Linera Regression 
@@ -112,11 +113,19 @@ is the following:
  &nbsp;&nbsp;&nbsp;&nbsp; ![f=Regularized Linear Regression](img/RegLinReg.png)  
 And its derivative *f'* is:  
   &nbsp;&nbsp;&nbsp;&nbsp; ![f-prime](img/RegLinRegPrim.png)  
-Implement two functions in Python, one for *f* and another for *f'*.
- As an optional exercise, work the derivation of the objective function.
+Implement two functions in Python, one that computes *f* and another
+that computes *f'*.  As an optional exercise, work the derivation of
+the objective function.
 
 - **Q7**) Implement code to train a regularized linear regression
 model using gradient descent according to the previous pseudocode.
+ > Some hints:  
+   - Make sure your *f* and *f'* functions are correct. Here are some
+   values for reference:  
+    *f*(data_train_with_bias, theta_all_zeros) = 660.1083  
+    *f'*(data_train_with_bias, theta_all_zeros) = [ -48.62, -20.40, -676.58, -422.27, -3.90, -24.70, -317.49, -3033.81, -206.06, -222.99, -15327.84, -857.69, -18476.12, -477.47]  
+   - Start with only a few iterations, and check that your loss is decreassing, if it is doing a zig-zag, lower your learning step
+
 
 ## Model Selection
 
