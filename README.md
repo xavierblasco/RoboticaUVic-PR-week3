@@ -3,7 +3,15 @@ UVic Robotics Master. Pattern Recognition Homework 1
 
 ## Instructions
 
+Fork this repository and write code to complete the assignments. When
+executed, your code must print the answers to the questions in each
+section, alongside the results that led to these conclusions.
 
+First upload the completed assignment to the course Moodle for
+grading; then, correct all the isses marked by the teacher and push it
+to GitHub for the final evaluation.
+
+This is a personal assignment, please complete it **individually**. 
 
 ## Preliminaries
 
@@ -12,7 +20,7 @@ using Python. Python is a very easy to learn and flexible programming
 language, with many libraries for the most diverse tasks. There are
 currently two main flavours of Python that are not fully compatible:
 version 2 (currently 2.7) and version 3 (currently 3.5). In this
-course we will be using version 2.7 as the version of OpenCV shipped
+course we will be using version 2.7, as the version of OpenCV shipped
 with Ubuntu does not support the latter version.
 
 For the homework in this course, we will use the following libraries, mostly from the SciPy family:
@@ -22,7 +30,7 @@ For the homework in this course, we will use the following libraries, mostly fro
 - [Scikit Learn](http://scikit-learn.org/stable/) Is a simple and complete machine learning library for Python.
 - [OpenCV](http://opencv.org/) is the reference computer vision and image processing library, with comprehensive Python bindings.
 
-Besides these libraries, [IPython](http://ipython.org/) is recommended as an extended and more friendly interactive Python interpreter. It is also necessary to view the course notebooks.
+Besides these libraries, [IPython](http://ipython.org/) is recommended as an extended and more friendly interactive Python interpreter. It is also necessary in order to view the course notebooks.
 
 In Ubuntu 14.04, all the required software can be installed with the following commands:
 
@@ -40,7 +48,7 @@ get up to speed in a few minutes:
 - Official Python 2 [tutorial](https://docs.python.org/2/tutorial/)
 - OpenCV-Python [tutorials](https://opencv-python-tutroals.readthedocs.org/en/latest/py_tutorials/py_tutorials.html)
 
-For this assignment, it is recommended to complete at least the **Python+Numpy** tutorial.
+For this assignment, it is recommended to read at least the **Python+Numpy** tutorial.
 
 ## Linear Regression 
 
@@ -48,11 +56,11 @@ See the ipython notebook from the class for reference.
 
 0. [Download](http://archive.ics.uci.edu/ml/datasets/Housing) the Housing Data Set from the UCI repository.
 1. Load the data (using *numpy.loadtxt*) and separate the last column (target value, MEDV). Compute the average of the target value and the MSE obtained using it as a constant prediction.
-2. Split the data in two parts (50-50) for training and testing (first for training, second for testing). Train a linear regressor model for each variable individually (plus a bias term) and compute the MSE on the training and the testing set. Which one is the most informative? which one generalizes better? and worse?
-3. Now train a model with all the variables plus a bias term. What is the performance in the test set? Now remove the worst-performing variable you found in step 2, and run again the experiment. What happened?
-4. We can give more capacity to a linear regression model by using *basis functions* (Bishop, sec. 3.1). In short we can apply non-linear transformations to the input variables to extend the feature vector. Here we will try a polynomial function:
--> ![Alt](img/poly.png) <-
-Repeat step 2 but adding all polynomials up to degree 4. What are the effects of adding more capacity to the model?
+2. Split the data in two parts (50-50) for training and testing (first for training, second for testing). Train a linear regressor model for each variable individually (plus a bias term) and compute the MSE on the training and the testing set. Which variable is the most informative? which one generalizes better? and worse?
+3. Now train a model with all the variables plus a bias term. What is the performance in the test set? Try removing the worst-performing variable you found in step 2, and run again the experiment. What happened?
+4. We can give more capacity to a linear regression model by using *basis functions* (Bishop, sec. 3.1). In short, we can apply non-linear transformations to the input variables to extend the feature vector. Here we will try a polynomial function:
+![Alt](img/poly.png)
+Repeat step 2 but adding, one by one, all polynomials up to degree 4. What are the effects of adding more capacity to the model?
 
 ## Gradient Descent
 
