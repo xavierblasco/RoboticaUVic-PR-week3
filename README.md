@@ -57,14 +57,14 @@ For this assignment, it is recommended to read at least the **Python+Numpy** tut
 
 See the ipython notebook from the class for reference.
 
-0. [Download](http://archive.ics.uci.edu/ml/datasets/Housing) the
+1. [Download](http://archive.ics.uci.edu/ml/datasets/Housing) the
 Housing Data Set from the UCI repository.
 
-1. Load the data (using *numpy.loadtxt*) and separate the last column
+2. Load the data (using *numpy.loadtxt*) and separate the last column
 (target value, MEDV). Compute the average of the target value and the
 MSE obtained using it as a constant prediction.
 
-2. Split the data in two parts (50-50) for training and testing (first
+3. Split the data in two parts (50-50) for training and testing (first
 half for training, second half for testing). Train a linear regressor
 model for each variable individually (plus a bias term) and compute
 the MSE on the training and the testing set. Which variable is the
@@ -72,18 +72,19 @@ most informative? which one makes the model generalizes better? and
 worse? Compute the coefficient of determination (R^2) measure for the
 test set.
 
-3. Now train a model with all the variables plus a bias term. What is
+4. Now train a model with all the variables plus a bias term. What is
 the performance in the test set? Try removing the worst-performing
 variable you found in step 2, and run again the experiment. What
 happened?
 
-4. We can give more capacity to a linear regression model by using
+5. We can give more capacity to a linear regression model by using
 *basis functions* (Bishop, sec. 3.1). In short, we can apply
 non-linear transformations to the input variables to extend the
-feature vector. Here we will try a polynomial function:
-![Alt](img/poly.png)
-Repeat step 2 but adding, one by one, all polynomials up to degree
-4. What are the effects of adding more capacity to the model?
+feature vector. Here we will try a polynomial function:  
+![Alt](img/poly.png)  
+Repeat step 2 but adding, one by one, all
+polynomials up to degree 4. What are the effects of adding more
+capacity to the model?
 
  ## Gradient Descent
 
