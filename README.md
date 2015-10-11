@@ -91,27 +91,32 @@ capacity to the model?
 As we have seen, overfitting is a problem that arises when we try to
 have more powerful methods, able to better adapt to the data. In order
 to reduce overfitting, we can **regularize** our model, but then we do
-not have a closed form solution and must resort to
-optimization. Gradient descent is one of the most common optimization
-techniques
+not have a closed form solution and must resort to optimization. First
+we will use *Gradient Descent*, which is a very common optimization
+algorithm. Here is a simple implementation in pseudo-code:
 
 ```
-1. Initialize theta at random
-2. it = 0
-2. While it<maxit:
-3.     theta<sub>t+1</sub> = theta - nu * f'(theta)
-4.     
+1. Initialize theta(0) at random
+2. t=0, maxit=100, epsilon=0.01, loss=zeros(maxit)
+3. loss(0) = f(theta)
+4. do
+5.     t=t+1
+6.     theta(t) = theta(t-1) - step * f'(theta(t-1))
+7.     loss(t) = f(theta)
+8. While t<maxit and (t>1 and loss(t-1)-loss(t)>epsilon):
+9. return theta
 ```
 
-- **Q6**) Implement code to train a regularized linear regression
+- **Q6**) The objective function *f* for Regularized Linera Regression 
+is the following:  
+ &nbsp;&nbsp;&nbsp;&nbsp; ![f=Regularized Linear Regression](img/RegLinReg.png)  
+And its derivative *f'* is:  
+  &nbsp;&nbsp;&nbsp;&nbsp; ![f-prime](img/RegLinRegPrim.png)  
+Implement two functions in Python, one for *f* and another for *f'*.
+ As an optional exercise, work the derivation of the objective function.
+
+- **Q7**) Implement code to train a regularized linear regression
 model using gradient descent according to the previous pseudocode.
-The objective function is the following:  
- &nbsp;&nbsp;&nbsp;&nbsp; ![Alt](img/RegLogReg.png)  
-And its derivative is:  
-  &nbsp;&nbsp;&nbsp;&nbsp; ![Alt](img/RegLogRegPrim.png)  
-As an optional exercise, work the derivation of the objective function.
-
-- **Q7**)
 
 ## Model Selection
 
