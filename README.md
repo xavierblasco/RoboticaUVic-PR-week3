@@ -86,22 +86,22 @@ Repeat step 2 but adding, one by one, all
 polynomials up to degree 4. What are the effects of adding more
 capacity to the model?
 
- ## Gradient Descent
+## Gradient Descent
 
- As we have seen, overfitting is a problem that arises when we try to
- have more powerful methods, able to better adapt to the data. In order
- to reduce overfitting, we can **regularize** our model, but then we do
- not have a closed form solution and must resort to
- optimization. Gradient descent is one of the most common optimization
- techniques
+As we have seen, overfitting is a problem that arises when we try to
+have more powerful methods, able to better adapt to the data. In order
+to reduce overfitting, we can **regularize** our model, but then we do
+not have a closed form solution and must resort to
+optimization. Gradient descent is one of the most common optimization
+techniques
 
- ```
- 1. Initialize theta at random
- 2. While not converged:
- 3.     theta = theta - nu * f(theta)
- ```
+```
+1. Initialize theta at random
+2. While not converged:
+3.     theta = theta - nu * f(theta)
+```
 
-5. Implement code to train a regularized linear regression
+6. Implement code to train a regularized linear regression
 model using gradient descent according to the previous pseudocode.
 
 
