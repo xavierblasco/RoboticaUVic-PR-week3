@@ -72,6 +72,12 @@ the most informative? which one makes the model generalizes better?
 and worse? Compute the coefficient of determination (R^2) for the test
 set.
 
+ > Hint: If you want to select the i-th column of an array, but want
+ > it to retain the two dimension, you can do it like that:  
+ > ```python  
+ > column = data_array[:,i:i+1] 
+ > ```  
+
 - **Q4**) Now train a model with all the variables plus a bias term. What is
 the performance in the test set? Try removing the worst-performing
 variable you found in step 2, and run again the experiment. What
