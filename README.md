@@ -128,8 +128,8 @@ test data.
  >   *f*(data_train_with_bias, labels_train, theta_all_zeros, Lambda=1) = 660.1083  
  >   *f'*(data_train_with_bias, labels_train, theta_all_zeros, Lambda=1) = [ -48.62, -20.40, -676.58, -422.27, -3.90, -24.70, -317.49, -3033.81, -206.06, -222.99, -15327.84, -857.69, -18476.12, -477.47]  
  >   *f*(data_train_with_bias, labels_train, theta_all_0.01, Lambda=1) = 328.66
- >   *f'*(data_train_with_bias, labels_train, theta_all_0.01, Lambda=1) = [ -31.98 -12.23 -485.03 -260.24 -2.55 -15.98 -212.42 -1923.15 -137.89 -146.50 -9899.61 -5.60.03 -12199.25 -285.86]
- >  - Start with only a few iterations, and check that your loss (computed with *f*) is decreassing. If it is increasing or doing a zig-zag, lower your learning step.
+ >   *f'*(data_train_with_bias, labels_train, theta_all_0.01, Lambda=1) = [ -31.98, -12.23, -485.03, -260.24, -2.55, -15.98, -212.42, -1923.15, -137.89, -146.50, -9899.61, -560.03, -12199.25, -285.86]
+ >  - Start with only a few iterations, and check that your loss (computed with *f* ) is decreassing. If it is increasing or doing a zig-zag, lower your learning step.
  >  - To start, use lambda=10 and step=1e-6.
 
 - **Q8**) Writting a good optimization routine is very difficult, with
@@ -166,11 +166,12 @@ effect of regularization in a *cost surface*. Using bias and a single
 variable our model has two parameters, which means we can plot each
 possible model in an area, and assign it a color based on the loss for
 the particular choice of parameters. Complete the following code, and
-use it to visualize the cost surface for several choices of lambda,
-ranging from very small to very large. Describe what you observe.
+use it to visualize the cost surface of the second variable (ZN) for
+several choices of lambda, ranging from very small to very
+large. Describe what you observe.
   
  ```python
- def paint_space(f, features, labels, Lambda):
+ def plot_cost_surface(f, features, labels, Lambda):
     from matplotlib import pyplot
     XX, YY = np.meshgrid(np.arange(-10,10,0.1), np.arange(-10,10,0.1))
     ZZ = np.zeros(XX.shape)
