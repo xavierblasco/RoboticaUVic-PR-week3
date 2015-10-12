@@ -114,7 +114,7 @@ algorithm. Here is a simple implementation in pseudo-code:
 9.   return theta
 ```
 
-- **Q6**) The objective function *f* for Regularized Linera Regression 
+- **Q6**) The objective function *f* for Regularized Linear Regression 
 is the following:  
  &nbsp;&nbsp;&nbsp;&nbsp; ![f=Regularized Linear Regression](img/RegLinReg.png)  
 And its derivative *f'* is:  
