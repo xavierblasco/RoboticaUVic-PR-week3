@@ -92,19 +92,19 @@ As we have seen, overfitting is a problem that arises when we try to
 have more powerful methods, able to better adapt to the data. In order
 to reduce overfitting, we can **regularize** our model, but then we do
 not have a closed form solution and must resort to optimization. First
-we will use *Gradient Descent*, which is a very common optimization
+we will use *Gradient Descent*, which is a widely used optimization
 algorithm. Here is a simple implementation in pseudo-code:
 
 ```
 0. Function Gradient_Descent
 1.   Initialize theta(0) at random
-2.   t=0, maxit=100, step=0.01; epsilon=0.0001, loss=zeros(maxit)
+2.   t=0, maxit=100, step=0.01, loss=zeros(maxit)
 3.   loss(0) = f(theta)
 4.   do
 5.      t=t+1
 6.      theta(t) = theta(t-1) - step * f'(theta(t-1))
 7.      loss(t) = f(theta)
-8.   While t<maxit and (t>1 and loss(t-1)-loss(t)>epsilon):
+8.   While t<maxit
 9.   return theta
 ```
 
@@ -118,17 +118,29 @@ that computes *f'*.  As an optional exercise, work the derivation of
 the objective function.
 
 - **Q7**) Implement code to train a regularized linear regression
-model using gradient descent according to the previous pseudocode.
- > Some hints:  
+model using gradient descent according to the previous pseudocode. Use
+it to train a model with all variables and then evaluate it in the
+test data. 
+ > This may be a difficult exercise. Here are some hints to help you finish it successfully:  
  >  - Make sure your *f* and *f'* functions are correct. Here are some
  >  values for reference:  
- >   *f*(data_train_with_bias, theta_all_zeros) = 660.1083  
- >   *f'*(data_train_with_bias, theta_all_zeros) = [ -48.62, -20.40, -676.58, -422.27, -3.90, -24.70, -317.49, -3033.81, -206.06, -222.99, -15327.84, -857.69, -18476.12, -477.47]  
- >  - Start with only a few iterations, and check that your loss is decreassing, if it is doing a zig-zag, lower your learning step
+ >   *f*(data_train_with_bias, labels_train, theta_all_zeros, lambda=1) = 660.1083  
+ >   *f'*(data_train_with_bias, labels_train, theta_all_zeros, lambda=1) = [ -48.62, -20.40, -676.58, -422.27, -3.90, -24.70, -317.49, -3033.81, -206.06, -222.99, -15327.84, -857.69, -18476.12, -477.47]  
+ >   *f*(data_train_with_bias, labels_train, theta_all_0.01, lambda=1) = 328.66
+ >   *f'*(data_train_with_bias, labels_train, theta_all_0.01, lambda=1) = [ -31.98 -12.23 -485.03 -260.24 -2.55 -15.98 -212.42 -1923.15 -137.89 -146.50 -9899.61 -5.60.03 -12199.25 -285.86]
+ >  - Start with only a few iterations, and check that your loss (computed with *f*) is decreassing. If it is increasing or doing a zig-zag, lower your learning step.
+ >  - To start, use lambda=10 and step=1e-6.
 
+- **Q8**) Except if you are doing research on the subject, in general
+    it is not necessary to write your own function optimization code:
+    there are many libraries that provide robust implementations. For
+    the rest of the homework we will use [*fmin_l_bfgs_b*](http://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.fmin_pl_bfgs_b.html)
+ 
+Like in the case of it is not necessary
 
 ## Model Selection
 
+- **Q8**
 
 ## Extra
 
