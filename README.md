@@ -64,7 +64,7 @@ Housing Data Set from the UCI repository.
 (target value, MEDV). Compute the average of the target value and the
 MSE obtained using it as a constant prediction.
 
-- **Q3**) Split the data in two parts (50-50) for training and testing
+- **Q3**) Split the data in two parts (50%-50%) for training and testing
 (first half for training, second half for testing). Train a linear
 regressor model for each variable individually (plus a bias term) and
 compute the MSE on the training and the testing set. Which variable is
