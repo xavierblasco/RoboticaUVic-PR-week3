@@ -11,7 +11,7 @@ look nicer. An IPython notebook is an acceptable alternative to a
 plain python program.
 
 First upload the completed assignment to the course Moodle for
-grading; then, correct all the isses marked by the teacher and push it
+grading; then, correct all the issues marked by the teacher and push it
 to GitHub for the final evaluation.
 
 This is a personal assignment, please complete it **individually**. 
