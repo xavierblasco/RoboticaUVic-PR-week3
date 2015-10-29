@@ -57,9 +57,10 @@ For this assignment, it is recommended to read at least the **Python+Numpy** tut
 
 See the ipython notebook from the class for reference.
 
-- **Q1**) Open the file *data_housing.txt* and take a look at it. You
-can also [download](http://archive.ics.uci.edu/ml/datasets/Housing) the
-Housing Data Set from the original UCI repository.
+- **Q1**) Open the file *data_housing.txt* and *data_housing.name* and
+take a look at it. You can also
+[download](http://archive.ics.uci.edu/ml/datasets/Housing) the Housing
+Data Set from the original UCI repository.
 
 - **Q2**) Load the data (using *numpy.loadtxt*) and separate the last column
 (target value, MEDV). Compute the average of the target value and the
