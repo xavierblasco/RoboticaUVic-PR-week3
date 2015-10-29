@@ -1,4 +1,4 @@
-# RoboticaUVic-PR-week1
+# RoboticaUVic-PR-week3
 UVic Robotics Master. Pattern Recognition Homework 1
 
 ## Instructions
