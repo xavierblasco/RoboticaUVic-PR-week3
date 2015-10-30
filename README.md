@@ -144,7 +144,7 @@ knowledge of the field. Furthermore, except if you are doing research
 on the subject, in general it is not necessary to write your own
 function optimization code: there are many libraries that provide
 robust implementations. For the rest of the homework we will use
-[*fmin_l_bfgs_b*](http://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.fmin_pl_bfgs_b.html)
+[*fmin_l_bfgs_b*](http://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.optimize.fmin_l_bfgs_b.html)
 as our optimizer. Read the online documentation to figure out how to
 use it, and train a model for our data.
   > Hint: You only need to worry about the first four parameters.
