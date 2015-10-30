@@ -40,7 +40,7 @@ In Ubuntu 14.04, all the required software can be installed with the following c
 ```bash
 $ sudo apt-get install python-scipy python-numpy python-matplotlib \
   python-opencv python-sklearn
-$ sudo apt-get install ipython
+$ sudo apt-get install ipython notebook
 ```
 
 Learning Python is extraordinarily easy, especially if other
